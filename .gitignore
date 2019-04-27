@@ -1,7 +1,8 @@
 /vendor
-/.idea
+/.idea/
 Homestead.json
 Homestead.yaml
 .env
 /laradock
 storage/.php_cs.cache
+
