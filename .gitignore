@@ -1,5 +1,6 @@
 /vendor
 /.idea/
+/.idea/php.xml
 Homestead.json
 Homestead.yaml
 .env
