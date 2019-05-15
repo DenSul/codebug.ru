@@ -20,6 +20,6 @@ RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 COPY ./ /app
 WORKDIR /app
 
-# Need fixed this shit.
-CMD bash -c "composer install --no-dev --no-interaction --no-ansi --no-suggest --prefer-dist && php-fpm"
+# Need fixed this shit. add --no-dev for prod.
+CMD bash -c "composer install --no-interaction --no-ansi --no-suggest --prefer-dist && php-fpm"
 
