@@ -7,7 +7,7 @@ module.exports = {
     entry: './app.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'public', 'bundles')
+        path: path.resolve(__dirname, 'public')
     },
     module: {
         rules: [
@@ -45,7 +45,8 @@ module.exports = {
                 proxy: 'http://127.0.0.1:9001/',
                 open: "external",
                 files: [
-                    './resources/views/**/*.blade.php'
+                    './resources/views/**/*.blade.php',
+                    './resources/scss/*.scss'
                 ]
             },
             {
