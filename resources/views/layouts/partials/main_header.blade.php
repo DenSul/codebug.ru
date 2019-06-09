@@ -1,11 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
         <a class="navbar-brand" href="{{route('index')}}">
             <img src="{{url('svg/logo.svg')}}" alt="codebug.ru" />
         </a>
-        <div>
-            <h3>codebug.ru</h3>
-            <p>Design/Front-end/Back-end/Server-side/Android apps/DevOps</p>
+        <div class="blog-info-header">
+            <h3>
+                codebug.ru
+                <small style="display: block">Design/Front-end/Back-end/Server-side/Android apps/DevOps</small>
+            </h3>
         </div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"

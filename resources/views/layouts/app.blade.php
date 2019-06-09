@@ -18,9 +18,7 @@
 </div>
 
 <footer class="footer">
-    <div class="container container-fluid">
-        @include('layouts.partials.footer')
-    </div>
+    @include('layouts.partials.footer')
 </footer>
 
 @section('scripts')
