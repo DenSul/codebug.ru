@@ -25,6 +25,7 @@ install:
 script:
   - if [[ $coverage = 'true' ]]; then composer test-cover; else composer test; fi
   - composer analyze
+  - npm install
 
 after_success:
   - if [[ $coverage = 'true' ]]; then bash <(curl -s https://codecov.io/bash); fi
