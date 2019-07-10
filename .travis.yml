@@ -32,8 +32,8 @@ after_success:
 
 matrix:
   include:
-    - php: 7.1
-    - php: 7.1
+    - php: 7.1.8
+    - php: 7.1.8
       env: setup=lowest
 
     - php: 7.2
