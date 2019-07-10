@@ -4,10 +4,10 @@
 @endsection
 
 @section('main_content')
-    <div class="container">
+    <div class="container mb-30px">
         <div class="last-post">
             <a href="#">
-                <img src="{{url('images/banners/last_post.jpg')}}" alt="" class="img-fluid" />
+                <img src="{{url('images/banners/banner.png')}}" alt="" class="img-fluid" />
                 <span class="last-post-content">
                     <span class="last-post-content-category">
                         sass/less/css

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
         <a class="navbar-brand" href="{{route('index')}}">
-            <img src="{{url('svg/logo.svg')}}" alt="codebug.ru" />
+            <img src="{{url('svg/logo.svg')}}" class="img-fluid" alt="codebug.ru" />
         </a>
         <div class="blog-info-header">
             <h3>

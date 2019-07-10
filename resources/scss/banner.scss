@@ -8,8 +8,6 @@
         text-align: center;
         img {
             height: 400px;
-            z-index: 1;
-
             @media(min-width: 1000px) {
                 height: 550px;
             }
@@ -41,17 +39,17 @@
         }
 
         &-category {
-            @extend .h3;
+            @extend .h4;
             margin-bottom: 0;
         }
 
         &-title {
-            @extend .h1;
+            @extend .h2;
             margin-bottom: 12px;
         }
 
         &-date {
-            @extend .h4;
+            @extend .h5;
         }
     }
 }
