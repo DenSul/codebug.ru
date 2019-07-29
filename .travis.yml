@@ -16,11 +16,15 @@ sudo: false
 
 before_install:
   - if [[ $coverage = 'false' ]]; then phpenv config-rm xdebug.ini || true; fi
+  - composer global require hirak/prestissimo --update-no-dev
 
 install:
   - if [[ $setup = 'basic'  ]]; then travis_retry composer update --prefer-dist --no-interaction --no-suggest; fi
   - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --no-suggest --prefer-stable; fi
   - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --no-suggest --prefer-stable --prefer-lowest; fi
+
+before_script:
+  - php artisan key:generate
 
 script:
   - if [[ $coverage = 'true' ]]; then composer test-cover; else composer test; fi
