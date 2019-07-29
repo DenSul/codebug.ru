@@ -9,12 +9,12 @@
 
 Coming soon
 
-## Installation
+## Installation for development
 
 - `git clone https://github.com/DenSul/codebug.ru.git && cd codebug.ru`
 - `docker-composer up -d`
-- `npm install`
-- `npm run watch`
+- `npm install` (in container or in folder)
+- `npm run watch` (in container or in folder)
 
 ## License
 
