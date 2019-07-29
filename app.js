@@ -1,4 +1,4 @@
 import $ from 'jquery'
 import 'bootstrap';
-import './resources/scss/app.scss';
-import './resources/scss/header.scss';
+import './resources/themes/default/scss/app.scss';
+import './resources/themes/default/scss/header.scss';

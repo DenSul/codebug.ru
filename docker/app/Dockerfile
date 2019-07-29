@@ -1,7 +1,5 @@
 FROM php:7.2-fpm
 
-ENV DEBIAN_FRONTEND noninteractive
-
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils zip unzip git libmcrypt-dev libpq-dev
 RUN apt-get install -y bash-completion
 
@@ -21,5 +19,6 @@ COPY ./ /app
 WORKDIR /app
 
 # Need fixed this shit. add --no-dev for prod.
+# make container composer
 CMD bash -c "composer install --no-interaction --no-ansi --no-suggest --prefer-dist && php-fpm"
 
