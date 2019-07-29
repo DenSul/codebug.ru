@@ -1,5 +1,9 @@
 <?php
 
+use LaravelDoctrine\ORM\Facades\Doctrine;
+use LaravelDoctrine\ORM\Facades\EntityManager;
+use LaravelDoctrine\ORM\Facades\Registry;
+
 require_once __DIR__.'/../vendor/autoload.php';
 
 (new Laravel\Lumen\Bootstrap\LoadEnvironmentVariables(
@@ -25,7 +29,7 @@ $app->instance('path.config', app()->basePath().DIRECTORY_SEPARATOR.'config');
 $app->instance('path.storage', app()->basePath().DIRECTORY_SEPARATOR.'storage');
 
 $app->withFacades();
-$app->withEloquent();
+//$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +51,20 @@ $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
+
+$app->register(LaravelDoctrine\ORM\DoctrineServiceProvider::class);
+
+if (!class_exists('EntityManager')) {
+    class_alias(EntityManager::class, 'EntityManager');
+}
+
+if (!class_exists('Registry')) {
+    class_alias(Registry::class, 'Registry');
+}
+
+if (!class_exists('Doctrine')) {
+    class_alias(Doctrine::class, 'Doctrine');
+}
 
 /*
 |--------------------------------------------------------------------------

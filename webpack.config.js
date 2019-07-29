@@ -18,7 +18,7 @@ module.exports = {
                         loader: 'style-loader'
                     },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader', options: {url: false}
                     },
                     {
                         loader: 'postcss-loader',
@@ -45,8 +45,8 @@ module.exports = {
                 proxy: 'http://127.0.0.1:9001/',
                 open: "external",
                 files: [
-                    './resources/views/**/*.blade.php',
-                    './resources/scss/*.scss'
+                    './resources/themes/**/views/**/*.blade.php',
+                    './resources/themes/**/views/scss/*.scss'
                 ]
             },
             {
