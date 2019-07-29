@@ -25,6 +25,7 @@ install:
 
 before_script:
   - chmod 777 -R storage/
+  - sleep 1
 
 script:
   - if [[ $coverage = 'true' ]]; then composer test-cover; else composer test; fi
