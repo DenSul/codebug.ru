@@ -54,15 +54,15 @@ $app->singleton(
 
 $app->register(LaravelDoctrine\ORM\DoctrineServiceProvider::class);
 
-if (!class_exists('EntityManager')) {
+if (! class_exists('EntityManager')) {
     class_alias(EntityManager::class, 'EntityManager');
 }
 
-if (!class_exists('Registry')) {
+if (! class_exists('Registry')) {
     class_alias(Registry::class, 'Registry');
 }
 
-if (!class_exists('Doctrine')) {
+if (! class_exists('Doctrine')) {
     class_alias(Doctrine::class, 'Doctrine');
 }
 
