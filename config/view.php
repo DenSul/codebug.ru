@@ -6,5 +6,5 @@ return [
     'paths'    => [
         resource_path(sprintf('themes/%s/views', $theme)),
     ],
-    'compiled' => '/app/storage/framework/views',
+    'compiled' => storage_path('framework/views'),
 ];
