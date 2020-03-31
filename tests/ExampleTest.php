@@ -12,7 +12,8 @@ class ExampleTest extends TestCase
         $this->get('/');
 
         $this->assertContains(
-            'codebug.ru', $this->response->getContent()
+            'codebug.ru',
+            $this->response->getContent()
         );
     }
 }
